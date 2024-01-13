@@ -134,9 +134,7 @@ Thundertooth, initially a stranger to this futuristic world, found a new home in
 ---
 **Yi 34B:**
 ```
-Note: There are no citations included in any responses. This is something I am actively working on as I believe a RAG system should be able to refer back to source documents/information.
-
-A separate notebook will be created when I work out how to include citations.
+TODO.
 ```
 
 ---
