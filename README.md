@@ -11,7 +11,7 @@ Environment:
 - Visual Studio Code (to run the Jupyter Notebooks)
 - Nvidia RTX 3090
 - 64GB RAM (Can be run with less)
-- LLMs - Mistral 7B, Llama 2 13B Chat, Orca 2 13B, Yi 34B, Mixtral 8x7B, Neural 7B, Phi-2, SOLAR 10.7B - Quantized versions
+- LLMs - Mistral 7B, Llama 2 13B Chat, Orca 2 13B, Yi 34B (Work in progress), Mixtral 8x7B, Neural 7B, Phi-2, SOLAR 10.7B - Quantized versions
 
 Your Data:
 - Add Word documents to the "Data" folder for the RAG to use
@@ -133,11 +133,9 @@ Thundertooth, initially a stranger to this futuristic world, found a new home in
 
 ---
 **Yi 34B:**
-```
-TODO.
-```
+
+I could not get Yi-34B to complete inference, I tried lower quantized models but it still didn't complete.
 
 ---
 #### Notes
-- I found Yi-34B, quantized, used up 22GB RAM (as well as 22GB VRAM) with Ollama and take a long time for inference (using both GPU and CPU together, though I think it should fit within GPU memory and run off the GPU exclusively). Not sure why this is the case.
 - Citations are not included in the responses, I believe RAG should include citations so I'm looking into that with LangChain and will create a separate notebook for citations.
