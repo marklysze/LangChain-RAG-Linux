@@ -132,11 +132,11 @@ dependencies:
       - jsonpatch==1.33
       - jsonpath-python==1.0.6
       - jsonpointer==2.4
-      - langchain==0.1.0
-      - langchain-community==0.0.11
+      - langchain==0.1.1
+      - langchain-community==0.0.13
       - langchain-core==0.1.9
       - langdetect==1.0.9
-      - langsmith==0.0.79
+      - langsmith==0.0.81
       - lxml==5.1.0
       - marshmallow==3.20.2
       - multidict==6.0.4
