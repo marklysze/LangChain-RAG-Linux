@@ -2,7 +2,7 @@
 
 These notebooks demonstrate the use of LangChain for Retrieval Augmented Generation using Linux and Nvidia's CUDA.
 
-Note: Using [LangChain v0.1](https://blog.langchain.dev/langchain-v0-1-0/).
+Note: Using [LangChain v0.1.1](https://blog.langchain.dev/langchain-v0-1-0/).
 
 Environment:
 - Linux (I'm running Ubuntu 22.04)
@@ -27,6 +27,24 @@ ollama pull mixtral:8x7b-instruct-v0.1-q4_K_M
 - See the Ollama [models page](https://ollama.ai/library) for the list of models. Within each model, use the "Tags" tab to see the different versions available ([example](https://ollama.ai/library/mixtral/tags)).
 
 Note that [nvtop](https://github.com/Syllo/nvtop) is a useful tool to monitor realtime utilisation of your GPU. Helpful to make sure the models fit within GPU memory (and don't go into your RAM and use your CPU as well).
+
+# Notebooks
+
+### 01-LangChain-RAG
+Get started with LangChain and Ollama, being able to use various local LLMs and Word Documents as sources for Retrieval Augmented Generation (RAG). Have it answer a few questions and see what they give you.
+
+### 02-LangChain-RAG LangSmith
+To help with being able to see what is happening under the hood, sign up for a LangSmith Access Code and use this notebook to see how it is setup. Same functionality as the previous notebook.
+
+### 03-LangChain-RAG Chunk Rerank
+Get started with breaking up the document yourself into better chunks and then using Cohere's reranking (free non-commercial API key available) to prioritise the chunks for your questions. I found the self-chunking and reranking improved the LLM responses significantly.
+
+### 04-LangChain-RAG Chunk Rerank Max Context
+Continuing on from #03, we now want to maximise the amount of context given to the LLM. Previously this was a set number of chunks, now we keep track of the number of tokens per chunk and give the LLM the maximum number of chunks we can fit into a given token limit (which we set). 
+
+We add callbacks (including a hack to workaround a bug) to count tokens and to manually choose the right amount of chunks to give the LLM after retrieval.
+
+This maximises the amount of context given to the LLM while keeping within a set context length so we don't exceed the LLM's context window.
 
 # Installation
 
@@ -134,8 +152,8 @@ Thundertooth, initially a stranger to this futuristic world, found a new home in
 ---
 **Yi 34B:**
 
-I could not get Yi-34B to complete inference, I tried lower quantized models but it still didn't complete.
+I could not get Yi-34B to complete inference, I tried lower quantized models but it still didn't complete. If anyone has Pi-34B working with LangChain and Ollama, help please!
 
 ---
 #### Notes
-- Citations are not included in the responses, I believe RAG should include citations so I'm looking into that with LangChain and will create a separate notebook for citations.
+- Getting the LLM to include citations with the sources is LLM dependent and heavily dependent on the prompt. It's important to get citations so I'll work on getting that for the #5 notebook.
