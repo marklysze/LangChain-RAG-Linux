@@ -17,7 +17,7 @@ Your Data:
 - Add Word documents to the "Data" folder for the RAG to use
 
 Package versions:
-- See the "conda_package_versions.txt" for the full list of versions in the conda environment (generated using "conda list").
+- See the "environment.yml" for the full list of versions in the conda environment (generated using "conda list").
 
 Local LLMs:
 - Ollama is run locally and you use the "ollama pull" command to pull down the models you want. For example, to pull down Mixtral 8x7B (4-bit quantized):
