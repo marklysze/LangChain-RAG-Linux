@@ -157,3 +157,13 @@ I could not get Yi-34B to complete inference, I tried lower quantized models but
 ---
 #### Notes
 - Getting the LLM to include citations with the sources is LLM dependent and heavily dependent on the prompt. It's important to get citations so I'll work on getting that for the #5 notebook.
+
+---
+
+#### Interested in LlamaIndex with Linux?
+Check out this repository which shows RAG with LlamaIndex: [https://github.com/marklysze/LlamaIndex-RAG-Linux-CUDA](https://github.com/marklysze/LlamaIndex-RAG-Linux-CUDA)
+
+#### Using Microsoft Windows and interested in LlamaIndex?
+Check out the equivalent notebooks in this repository using LlamaIndex for RAG: [https://github.com/marklysze/LlamaIndex-RAG-WSL-CUDA](https://github.com/marklysze/LlamaIndex-RAG-WSL-CUDA)
+
+
